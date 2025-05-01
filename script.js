@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
@@ -98,7 +98,6 @@ function playRound(humanChoice) {
     updateRound();
 }
 document.getElementById('play-again-btn').addEventListener('click', resetGame);
-=======
 console.log("Hello, Welcome to the rock paper and scissors!");
 
 // Global score variables
@@ -183,4 +182,3 @@ function playGame(rounds) {
 
 // Play a game of 5 rounds
 playGame(5);
->>>>>>> 420525c6616d62d339e347e437963081add64204
