@@ -225,3 +225,23 @@ header {
       width: 120px;
   }
 }
+#play-again-btn {
+  display: none;
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-size: 18px;
+  background-color: crimson;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#play-again-btn:hover {
+  background-color: darkred;
+}
+#message {
+  font-size: 24px;
+  font-weight: bold;
+  color: #222;
+}
