@@ -1,0 +1,227 @@
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  transition: background-color 0.3s, color 0.3s;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111112;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+  border-bottom: 2px solid #ddd;
+  color: white;
+  box-sizing: border-box;
+}
+.title h1 {
+  color: #ff4757;
+  margin: 0;
+  font-size: 1.8rem;
+  white-space: nowrap;
+}
+.na {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  white-space: nowrap;
+}
+.na ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.na li {
+  cursor: pointer;
+  font-weight: bold;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+.na li:hover {
+  color: #ff6b81;
+}
+.side {
+  position: fixed;
+  top: 70px;
+  left: 0;
+  height: calc(100vh - 70px);
+  width: 120px;
+  background-color: #111112;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 20px;
+  color: white;
+  border-right: 2px solid #444;
+  z-index: 900;
+  box-sizing: border-box;
+}
+.side ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.side li {
+  margin: 20px 0;
+  cursor: pointer;
+  transition: color 0.3s;
+  white-space: nowrap;
+}
+.side li:hover {
+  color: #ff6b81;
+}
+#rules {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: normal;
+  color: #333;
+}
+#rules a {
+  color: #8e6064;
+  text-decoration: none;
+  font-weight: bold;
+}
+#rules a:hover {
+  text-decoration: underline;
+  color: burlywood;
+}
+.main-content {
+  margin-left: 180px;
+  padding: 100px 20px 40px;
+  box-sizing: border-box;
+}
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+.card {
+  border: 1px solid #d35454;
+  border-radius: 40px;
+  padding: 25px;
+  text-align: center;
+  background-color: #ffffff;
+  box-shadow: 0 2px 5px rgba(180, 75, 75, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 180px;
+  gap: 15px;
+  cursor: default;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+.card:hover {
+  box-shadow: 0 4px 10px rgba(14, 0, 0, 0.7);
+  transform: scale(1.05);
+}
+.card img {
+  display: block;
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
+}
+.card-content button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: crimson;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: 100%;
+}
+.card-content button:hover {
+  background-color: darkred;
+}
+.results {
+  margin-top: 30px;
+  text-align: center;
+}
+.choices-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+#human-gif, #computer-gif {
+  width: 150px;
+  height: auto;
+  border-radius: 20px;
+  border: 2px solid #d35454;
+  box-shadow: 0 2px 8px rgba(180, 75, 75, 0.6);
+}
+.vs-text {
+  font-weight: bold;
+  color: #d35454;
+  user-select: none;
+}
+#result-message {
+  margin-top: 25px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #222;
+}
+#play-again-btn {
+  margin-top: 30px;
+  padding: 12px 25px;
+  font-size: 1rem;
+  background-color: crimson;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: none;
+}
+#play-again-btn:hover {
+  background-color: darkred;
+}
+@media (max-width: 768px) {
+  .main-content {
+      margin-left: 20px;
+      padding: 50px 10px 20px;
+  }
+  .cards-container {
+      flex-direction: column;
+      align-items: center;
+  }
+  .card {
+      width: 90%;
+  }
+  .side {
+      width: 100%;
+      position: relative;
+      height: auto;
+  }
+  header {
+      padding: 15px 20px;
+      flex-wrap: wrap;
+      gap: 15px;
+  }
+  .na {
+      justify-content: center;
+      width: 100%;
+  }
+  .choices-container {
+      flex-direction: column;
+      gap: 10px;
+      font-size: 1.6rem;
+  }
+  #human-gif, #computer-gif {
+      width: 120px;
+  }
+}

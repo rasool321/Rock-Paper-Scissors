@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>RPS</h1>
+        </div>
+        <nav class="na">
+            <ul>
+                <li>Home</li>
+                <li id="theme-toggle">Dark</li>
+                <li>Logout</li>
+            </ul>
+        </nav>
+    </header>
+    <div class="side">
+        <ul>
+            <li>Game Rules</li>
+            <li>About Us</li>
+            <li>Contact Us</li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <h1 id="matter"><b>Welcome to "Rock Paper Scissors"</b> <em>Game</em></h1>
+        <h1 id="rules">If you do not know the rules, <a href="gamerules.html">click here</a></h1>
+        <h2 id="line">Choose any one symbol</h2>
+
+        <div class="cards-container">
+            <div class="card rock">
+                <img class="human-gif" src="images/rock-emoji.png" alt="Rock" />
+                <div class="card-content">
+                    <button onclick="playRound('rock')">Choose Me!!</button>
+                </div>
+            </div>
+
+            <div class="card paper">
+                <img class="human-gif" src="images/paper-emoji.png" alt="Paper" />
+                <div class="card-content">
+                    <button onclick="playRound('paper')">Choose Me!!</button>
+                </div>
+            </div>
+
+            <div class="card scissors">
+                <img class="human-gif" src="images/scissors-emoji.png" alt="Scissors" />
+                <div class="card-content">
+                    <button onclick="playRound('scissors')">Choose Me!!</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="results">
+            <div class="choices-container">
+                <div>
+                    <h3>Your Choice:</h3>
+                    <img id="human-gif" src="" alt="Your choice" />
+                </div>
+                <div class="vs-text">vs</div>
+                <div>
+                    <h3>Computer's Choice:</h3>
+                    <img id="computer-gif" src="" alt="Computer's choice" />
+                </div>
+            </div>
+            <h2 id="result-message"></h2>
+            <img id="outcome-gif" src="" alt="Outcome GIF" style="display: block; margin: 20px auto; width: 200px;" />
+            <button id="play-again-btn">Play Again</button>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
